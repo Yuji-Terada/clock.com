@@ -48,7 +48,7 @@ var t3 = tSet[2];
 var t4 = tSet[3];
 
 function timer1Main() {
-    t1 = t1 > 599999 ? 599999 : t1;
+    t1 = t1 > 599900 ? 599900 : t1;
     var t1Min = Math.floor(t1 / 6000);
     t1Min = t1Min < 10 ? "0" + t1Min : t1Min;
     var t1Sec = Math.ceil((t1 % 6000) / 100);
@@ -60,13 +60,15 @@ function timer1Main() {
     if(t1 == 0){
         document.getElementById("t1").style.color = '#ff0000';
         clearInterval(timer1);
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        finishSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            finishSound.play();
+        }
     }
     else{
         document.getElementById("t1").style.color = '#333333';
@@ -76,7 +78,7 @@ function timer1Main() {
 timer1Main();
 
 function timer2Main() {
-    t2 = t2 > 599999 ? 599999 : t2;
+    t2 = t2 > 599900 ? 599900 : t2;
     var t2Min = Math.floor(t2 / 6000);
     t2Min = t2Min < 10 ? "0" + t2Min : t2Min;
     var t2Sec = Math.ceil((t2 % 6000) / 100);
@@ -88,13 +90,15 @@ function timer2Main() {
     if(t2 == 0){
         document.getElementById("t2").style.color = '#ff0000';
         clearInterval(timer2);
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        finishSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            finishSound.play();
+        }
     }
     else{
         document.getElementById("t2").style.color = '#333333';
@@ -104,7 +108,7 @@ function timer2Main() {
 timer2Main();
 
 function timer3Main() {
-    t3 = t3 > 599999 ? 599999 : t3;
+    t3 = t3 > 599900 ? 599900 : t3;
     var t3Min = Math.floor(t3 / 6000);
     t3Min = t3Min < 10 ? "0" + t3Min : t3Min;
     var t3Sec = Math.ceil((t3 % 6000) / 100);
@@ -116,13 +120,15 @@ function timer3Main() {
     if(t3 == 0){
         document.getElementById("t3").style.color = '#ff0000';
         clearInterval(timer3);
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        finishSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            finishSound.play();
+        }
     }
     else{
         document.getElementById("t3").style.color = '#333333';
@@ -144,13 +150,15 @@ function timer4Main() {
     if(t4 == 0){
         document.getElementById("t4").style.color = '#ff0000';
         clearInterval(timer4);
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        finishSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            finishSound.play();
+        }
     }
     else{
         document.getElementById("t4").style.color = '#333333';
@@ -171,13 +179,15 @@ $("#timer1").click(function(){
     if(t1Active){
         document.getElementById("timer1").innerHTML = '<i class="fa-solid fa-pause"></i>';
         t1Active = !t1Active;
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        startSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            startSound.play();
+        }
         timer1 = setInterval("timer1Main()", 10);
     }
     else{
@@ -191,13 +201,15 @@ $("#timer2").click(function(){
     if(t2Active){
         document.getElementById("timer2").innerHTML = '<i class="fa-solid fa-pause"></i>';
         t2Active = !t2Active;
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        startSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            startSound.play();
+        }
         timer2 = setInterval("timer2Main()", 10);
     }
     else{
@@ -211,13 +223,15 @@ $("#timer3").click(function(){
     if(t3Active){
         document.getElementById("timer3").innerHTML = '<i class="fa-solid fa-pause"></i>';
         t3Active = !t3Active;
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        startSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            startSound.play();
+        }
         timer3 = setInterval("timer3Main()", 10);
     }
     else{
@@ -231,13 +245,15 @@ $("#timer4").click(function(){
     if(t4Active){
         document.getElementById("timer4").innerHTML = '<i class="fa-solid fa-pause"></i>';
         t4Active = !t4Active;
-        startSound.pause();
-        startSound.currentTime = 0;
-        resetSound.pause();
-        resetSound.currentTime = 0;
-        finishSound.pause();
-        finishSound.currentTime = 0;
-        startSound.play();
+        if(sound){
+            startSound.pause();
+            startSound.currentTime = 0;
+            resetSound.pause();
+            resetSound.currentTime = 0;
+            finishSound.pause();
+            finishSound.currentTime = 0;
+            startSound.play();
+        }
         timer4 = setInterval("timer4Main()", 10);
     }
     else{
@@ -253,13 +269,16 @@ $("#timer1-re").click(function(){
     timer1Main();
     document.getElementById("timer1").innerHTML = '<i class="fa-solid fa-play"></i>';
     clearInterval(timer1);
-    startSound.pause();
-    startSound.currentTime = 0;
-    resetSound.pause();
-    resetSound.currentTime = 0;
-    finishSound.pause();
-    finishSound.currentTime = 0;
-    resetSound.play();
+    
+    if(sound){
+        startSound.pause();
+        startSound.currentTime = 0;
+        resetSound.pause();
+        resetSound.currentTime = 0;
+        finishSound.pause();
+        finishSound.currentTime = 0;
+        resetSound.play();
+    }
 });
 
 $("#timer2-re").click(function(){
@@ -268,13 +287,16 @@ $("#timer2-re").click(function(){
     timer2Main();
     document.getElementById("timer2").innerHTML = '<i class="fa-solid fa-play"></i>';
     clearInterval(timer2);
-    startSound.pause();
-    startSound.currentTime = 0;
-    resetSound.pause();
-    resetSound.currentTime = 0;
-    finishSound.pause();
-    finishSound.currentTime = 0;
-    resetSound.play();
+    
+    if(sound){
+        startSound.pause();
+        startSound.currentTime = 0;
+        resetSound.pause();
+        resetSound.currentTime = 0;
+        finishSound.pause();
+        finishSound.currentTime = 0;
+        resetSound.play();
+    }
 });
 
 $("#timer3-re").click(function(){
@@ -283,13 +305,16 @@ $("#timer3-re").click(function(){
     timer3Main();
     document.getElementById("timer3").innerHTML = '<i class="fa-solid fa-play"></i>';
     clearInterval(timer3);
-    startSound.pause();
-    startSound.currentTime = 0;
-    resetSound.pause();
-    resetSound.currentTime = 0;
-    finishSound.pause();
-    finishSound.currentTime = 0;
-    resetSound.play();
+    
+    if(sound){
+        startSound.pause();
+        startSound.currentTime = 0;
+        resetSound.pause();
+        resetSound.currentTime = 0;
+        finishSound.pause();
+        finishSound.currentTime = 0;
+        resetSound.play();
+    }
 });
 
 $("#timer4-re").click(function(){
@@ -298,13 +323,16 @@ $("#timer4-re").click(function(){
     timer4Main();
     document.getElementById("timer4").innerHTML = '<i class="fa-solid fa-play"></i>';
     clearInterval(timer4);
-    startSound.pause();
-    startSound.currentTime = 0;
-    resetSound.pause();
-    resetSound.currentTime = 0;
-    finishSound.pause();
-    finishSound.currentTime = 0;
-    resetSound.play();
+
+    if(sound){
+        startSound.pause();
+        startSound.currentTime = 0;
+        resetSound.pause();
+        resetSound.currentTime = 0;
+        finishSound.pause();
+        finishSound.currentTime = 0;
+        resetSound.play();
+    }
 });
 
 $("#timer1-set").click(function(){
@@ -323,21 +351,33 @@ $("#timer4-set").click(function(){
     modal.showModal();
 });
 
+var t1SetMin = document.getElementById("t1-set-min");
+var t1SetSec = document.getElementById("t1-set-sec");
+t1SetMin.value = 0;
+t1SetSec.value = 30;
+
+var t2SetMin = document.getElementById("t2-set-min");
+var t2SetSec = document.getElementById("t2-set-sec");
+t2SetMin.value = 0;
+t2SetSec.value = 30;
+
+var t3SetMin = document.getElementById("t3-set-min");
+var t3SetSec = document.getElementById("t3-set-sec");
+t3SetMin.value = 0;
+t3SetSec.value = 30;
+
+var t4SetMin = document.getElementById("t4-set-min");
+var t4SetSec = document.getElementById("t4-set-sec");
+t4SetMin.value = 0;
+t4SetSec.value = 30;
+
 const modal = document.querySelector("dialog");
 $("#close").click(function(){
     modal.close();
 
-    var t1SetMin = document.getElementById("t1-set-min");
-    var t1SetSec = document.getElementById("t1-set-sec");
     tSet[0] = (Number(t1SetMin.value) * 60 + Number(t1SetSec.value)) * 100;
-    var t2SetMin = document.getElementById("t2-set-min");
-    var t2SetSec = document.getElementById("t2-set-sec");
     tSet[1] = (Number(t2SetMin.value) * 60 + Number(t2SetSec.value)) * 100;
-    var t3SetMin = document.getElementById("t3-set-min");
-    var t3SetSec = document.getElementById("t3-set-sec");
     tSet[2] = (Number(t3SetMin.value) * 60 + Number(t3SetSec.value)) * 100;
-    var t4SetMin = document.getElementById("t4-set-min");
-    var t4SetSec = document.getElementById("t4-set-sec");
     tSet[3] = (Number(t4SetMin.value) * 60 + Number(t4SetSec.value)) * 100;
 
     t1Active = true;
@@ -361,11 +401,26 @@ $("#close").click(function(){
     document.getElementById("timer4").innerHTML = '<i class="fa-solid fa-play"></i>';
     clearInterval(timer4);
     
-    startSound.pause();
-    startSound.currentTime = 0;
-    resetSound.pause();
-    resetSound.currentTime = 0;
-    finishSound.pause();
-    finishSound.currentTime = 0;
-    resetSound.play();
+    if(sound){
+        startSound.pause();
+        startSound.currentTime = 0;
+        resetSound.pause();
+        resetSound.currentTime = 0;
+        finishSound.pause();
+        finishSound.currentTime = 0;
+        resetSound.play();
+    }
+});
+
+var sound;
+$("#soundOn").click(function(){
+    sound = false;
+    $("#soundOn").toggleClass("active");
+    $("#soundOff").toggleClass("active");
+});
+
+$("#soundOff").click(function(){
+    sound = true;
+    $("#soundOn").toggleClass("active");
+    $("#soundOff").toggleClass("active");
 });
