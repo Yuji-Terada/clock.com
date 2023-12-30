@@ -326,6 +326,7 @@ $("#timer4-set").click(function(){
 const modal = document.querySelector("dialog");
 $("#close").click(function(){
     modal.close();
+
     var t1SetMin = document.getElementById("t1-set-min");
     var t1SetSec = document.getElementById("t1-set-sec");
     tSet[0] = (Number(t1SetMin.value) * 60 + Number(t1SetSec.value)) * 100;
@@ -338,4 +339,33 @@ $("#close").click(function(){
     var t4SetMin = document.getElementById("t4-set-min");
     var t4SetSec = document.getElementById("t4-set-sec");
     tSet[3] = (Number(t4SetMin.value) * 60 + Number(t4SetSec.value)) * 100;
+
+    t1Active = true;
+    t1 = tSet[0];
+    timer1Main();
+    document.getElementById("timer1").innerHTML = '<i class="fa-solid fa-play"></i>';
+    clearInterval(timer1);
+    t2Active = true;
+    t2 = tSet[1];
+    timer2Main();
+    document.getElementById("timer2").innerHTML = '<i class="fa-solid fa-play"></i>';
+    clearInterval(timer2);
+    t3Active = true;
+    t3 = tSet[2];
+    timer3Main();
+    document.getElementById("timer3").innerHTML = '<i class="fa-solid fa-play"></i>';
+    clearInterval(timer3);
+    t4Active = true;
+    t4 = tSet[3];
+    timer4Main();
+    document.getElementById("timer4").innerHTML = '<i class="fa-solid fa-play"></i>';
+    clearInterval(timer4);
+    
+    startSound.pause();
+    startSound.currentTime = 0;
+    resetSound.pause();
+    resetSound.currentTime = 0;
+    finishSound.pause();
+    finishSound.currentTime = 0;
+    resetSound.play();
 });

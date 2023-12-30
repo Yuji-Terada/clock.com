@@ -368,4 +368,29 @@ dialog button{
         display: block;
         margin: auto 0 0 0;
     }
+
+    .timer-button-small{
+        width: 9rem;
+        height: 4rem;
+    
+        margin: 0.5rem auto auto auto;
+        padding: 0;
+    
+        display: flex;
+    }
+    
+    .timer-set{
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+    
+    .timer-re{
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+    dialog{
+        width: 70%;
+    }
 }
